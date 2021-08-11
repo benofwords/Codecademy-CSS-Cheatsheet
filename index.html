@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Values Info</title>
+    <head>
+
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        
+        </head>
+        
+        <body>
+
+          <h1>CSS Values and Units - what are they ?</h1>
+        
+        <p>In CSS specifications websites and  on the property pages on MDN one can easily  spot value types as they will be surrounded by angle brackets, such as <span class="code">&lt;color&gt;</span> or <span class="code">&lt;length&gt;</span>. When you see the value type <span class="code">&lt;color&gt;</span> as valid for a particular property, that means you can use any valid color as a value for that property.</p>
+        
+        <h2>Values in CSS</h2>
+        
+        <p>
+          A value type in CSS is a way to define a collection of allowable values. If we take the value type of <span class="code">&lt;color&gt;</span> - you don't need to wonder which of the different types of color value can be used — keywords, hex values, rgb() functions, etc. You can use any available <span class="code">&lt;color&gt;</span> values, assuming they are supported by your browser. 
+          </p>
+        
+          <h2>Units in CSS</h2>
+          <p>What then is a CSS unit? Effectively, it is the unit of measurement that you use to determine the size of a particular property which you are styling for a specific element, group of elements or the container of the element.</p>
+        
+        <p>For example:</p>
+        
+        <pre>
+          <code>
+            h2 { 
+              padding: 2em; 
+              }
+          </code>
+        </pre>
+        
+        <p>
+          If we look at the above ruleset, we can see that the property we are styling for this h2 selector is its padding. 
+        </p>
+        
+        <p>
+          The value we are using is 2em, - the unit in question is em, which is a relative unit as we will see below.
+        </p>
+        
+        <h2>Type, class, and ID selectors</h2>
+        
+        <table>
+        
+        <thead>
+        
+        <th>Data Type</th>
+        
+        
+        <th>Description</th>
+        
+        <th>Example</th>
+        
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+        
+        <td><span class="code">&lt;integer&gt;</span></td>
+        
+        <td>An &lt;integer&gt; is a whole number. </td>
+        
+        <td>1, 1024 or -11.</td>
+        
+        </tr>
+        
+        <tr>
+        
+        <td><span class="code">&lt;number&gt;</span></td>
+        
+        <td>A &lt;number&gt represents a decimal number - it might contain a decimal point with a fractional component - then again it may not. </td>
+        
+        <td> 0.435, 138 (imagine the .0), or -1.2.</td>
+        
+        </tr>
+        
+        <tr>
+        
+        <td><span class="code">&lt;dimension&gt;</span></td>
+        
+        
+        <td>A  &lt;dimension&gt is a &lt;number&gt which has a unit attached to it. It is an umbrella category which includes</td>
+        
+        <td>
+          <span class="code">&lt;length&gt</span>, <span class="code">&lt;angle&gt</span>, <span class="code">&lt;time&gt</span>, and <span class="code">&lt;resolution&gt</span> types.
+        </td>
+        
+        </tr>
+        
+        <tr>
+        
+        <td><span class="code">&lt;percentage&gt;</span></td>
+        
+        <td>A &lt;percentage&gt; represents a fraction of some other value. For example, 50%. Percentage values are always relative to another quantity. For example, an element's length is relative to its parent element's length.</td>
+        
+        <td>50%</td>
+        
+        </tr>
+        
+        
+        </tbody>
+        
+        </table>
+        
+        
+        
+        <h2>Lengths</h2>
+        
+        <p>The numeric type you will come across most frequently is &lt;length&gt;. For example 10px (pixels) or 30em. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.</p>
+        
+        <h3>Absolute Length</h3>
+        
+        <p>
+        The following are all absolute length units — they are not relative to anything else, and are generally considered to always be the same size.
+        </p>
+        
+        <table>
+        
+        <thead>
+        
+        <th>Unit</th>
+        
+        <th>Name</th>
+        
+        <th>Equivalent to</th>
+        
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+        
+        <td><span class="code">cm</span></td> 
+        
+        <td>Centimeters</td>
+        
+        <td>1cm = 38px = 25/64in.</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">mm</span></td> 
+        
+        <td>Millimeters</td>
+        
+        <td>1mm = 1/10th of 1cm</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">Q</span></td> 
+        
+        <td>Quarter-millimeters</td>
+        
+        <td>1Q = 1/40th of 1cm</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">in</span></td> 
+        
+        <td>Inches</td>
+        
+        <td>1in = 2.54cm = 96px</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">pc</span></td> 
+        
+        <td>Picas</td>
+        
+        <td>1pc = 1/6th of 1in</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">pts</span></td> 
+        
+        <td>Points</td>
+        
+        <td>1pt = 1/72th of 1in</td>
+        
+        </tr>
+        
+        <tr>
+        
+        <td><span class="code">px</span></td>
+        
+        <td>Pixels</td>
+        
+        <td>1px = 1/96th of 1in</td>
+        
+        </tr>
+        
+        </tbody>
+        
+        </table>
+        
+        <p>
+          Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use cm (centimeters) on screen. The only value that you will commonly use is px (pixels).
+          </p>
+        
+        <h3>Relative length units</h3>
+        
+        <p>
+          Relative length units - as the name implies are relative to something else, which could be the size of the parent element's font, or the size of the viewport. The point of using relative units is that via careful planning you can make it so the size of text or other elements scales relative to everything else on the page. i.e. a step towards responsive web development. Some of the most useful units for web development are:
+          </p>
+        
+        
+        <table>
+        
+        <thead>
+        
+        <th>Unit</th>
+        
+        <th>What it's relative to:</th>
+        
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+        
+        <td><span class="code">em</span></td>
+        
+        <td>
+          Font size of the parent, in the case of typographical properties like font-size, and font size of the element itself, in the case of other properties like width.
+        </td>
+        
+        </tr>
+        
+        <tr>
+        
+        <td><span class="code">ex</span></td>
+        
+        <td>x-height of the element's font.</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">ch</span></td>
+        
+        <td>The advance measure (width) of the glyph "0" of the element's font.</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">rem</span></td>
+        
+        <td>Font size of the root element.</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">lh</span></td>
+        
+        <td>Line height of the element</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">vw</span></td>
+        
+        <td>1% of the viewport's width'.</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">vh</span></td>
+        
+        <td>1% of the viewport's height.</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">vmin</span></td>
+        
+        <td>1% of the viewport's minimum dimension.</td>
+        
+        </tr>
+        <tr>
+        
+        <td><span class="code">vmax</span></td>
+        
+        <td>1% of the viewport's maximum dimension.</td>
+        
+        </tr>
+        
+        </tbody>
+        
+        </table>
+        
+        <footer>
+        <h3>Further/Better Resources</h3>
+         <ul>
+         <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"> MDN Documentation: CSS Values and Units</a></li>
+         
+        
+        <li><a href="https://www.digitalocean.com/community/tutorials/css-css-units-explained">Digital Ocean Tutorial on CSS Units</a></li>
+        </ul>
+        </footer>
+        
+        </body>
+</html>
